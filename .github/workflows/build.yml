@@ -18,6 +18,9 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
+      - run: |
+          python -m pip install --upgrade pip
+      - run: pip install .
       - run: ./test/test.sh
         env:
           DROPBOX_TOKEN: ${{ secrets.DROPBOX_TOKEN }}
