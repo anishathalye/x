@@ -7,8 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: sudo apt-get update -y
       - run: >-
-          sudo apt-get install
+          sudo apt-get install -y
           texlive-latex-extra
           texlive-fonts-recommended
           texlive-fonts-extra
