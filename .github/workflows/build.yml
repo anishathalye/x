@@ -6,7 +6,7 @@ on:
     - cron: '0 8 * * 6'
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       matrix:
         python: ["2.7", "pypy2", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "pypy3"]
